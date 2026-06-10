@@ -1,3 +1,5 @@
+import { LucideIcon } from 'lucide-react';
+// @ts-ignore
 import type { IconType } from 'react-icons/lib';
 
 export interface Skill {
@@ -8,6 +10,7 @@ export interface Skill {
 export interface SkillCategory {
   title: string;
   skills: string[];
+  icon: LucideIcon;
 }
 
 export interface Experience {

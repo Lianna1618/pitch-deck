@@ -32,7 +32,7 @@ export const Hero = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-gold font-medium mb-4 tracking-wider uppercase text-sm"
             >
-              Senior QA Engineer
+              QA Engineer
             </motion.p>
 
             <motion.h1

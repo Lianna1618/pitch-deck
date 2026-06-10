@@ -1,4 +1,6 @@
 import type { SkillCategory, Experience, Project, NavItem, Stat } from '../types';
+import { Bug, Cpu, Database, Wrench, Box, BotMessageSquare} from 'lucide-react';
+
 
 export const navItems: NavItem[] = [
   { label: 'Home', href: '#home' },
@@ -27,31 +29,40 @@ export const aboutHighlights = [
   'Cross Browser Testing',
 ];
 
+
+
+
 export const skillCategories: SkillCategory[] = [
   {
     title: 'Testing',
     skills: ['Manual Testing', 'Functional Testing', 'Regression Testing', 'Smoke Testing', 'UAT'],
+    icon: Bug
   },
   {
     title: 'Tools',
     skills: ['Postman', 'Swagger', 'Bruno', 'JMeter','Jira', 'Azure DevOps', 'ClickUp', 'Trello', 'Git'],
+    icon: Wrench
   },
   {
     title: 'Web3',
     skills: ['Smart Contracts', 'IPFS', 'DEX', 'DApps', 'Blockchain'],
+    icon: Box
   },
   {
     title: 'Automation',
     skills: ['Python', 'Selenium', 'Cypress', 'Pytest'],
+    icon: Cpu
   },
   {
     title: 'Databases',
     skills: ['SQL', 'PostgreSQL', 'pgAdmin', 'Navicat'],
+    icon: Database
   },
-  // {
-  //   title: 'Performance',
-  //   skills: ['JMeter'],
-  // },
+  {
+    title: 'AI Tools',
+    skills: ['ChatGPT' , 'Claude', 'Bolt', 'Prompt Engineering', 'Code Generation', 'Test Case Generation'],
+    icon: BotMessageSquare
+  }
 ];
 
 export const experiences: Experience[] = [
@@ -70,7 +81,7 @@ export const experiences: Experience[] = [
   },
   {
     company: 'Armbrok',
-    role: 'Senior QA Engineer',
+    role: 'QA Engineer',
     period: 'Nov 2025 – April 2026',
     description: 'Leading QA efforts for trading and financial platforms.',
     responsibilities: [
@@ -80,7 +91,7 @@ export const experiences: Experience[] = [
       'Collaborated with developers and business analysts on issue resolution',
       'Participated in release verification and production support',
     ],
-    technologies: ['QUIK', 'QORT','Trading Orders', 'Time in Force', 'Stocks', 'Bonds' , 'Limit Orders','Market Orders', 'Stop Orders', 'AML', 'SAMSUB'],
+    technologies: ['QUIK', 'QORT','Trading Orders', 'Time in Force', 'Stocks', 'Bonds' , 'Limit Orders','Market Orders', 'Stop Orders', 'AML', 'SUMSUB'],
   },
   {
     company: 'National Center of Educational Technologies',
@@ -89,11 +100,11 @@ export const experiences: Experience[] = [
     description: 'Quality assurance for educational technology platforms.',
     responsibilities: [
       'Executed functional and regression testing for e-learning platforms',
-      'Performed cross-browser and mobile compatibility testing',
+      'Performed cross-browser testing',
       'Documented test cases and tracked defects in Jira',
       'Collaborated with product team on requirements validation',
     ],
-    technologies: ['Selenium', 'Jira', 'SQL', 'Postman', 'Git'],
+    technologies: ['Selenium', 'Jira', 'SQL', 'Postman', 'API'],
   },
   {
     company: 'X-Soft',
@@ -101,12 +112,12 @@ export const experiences: Experience[] = [
     period: 'Apr 2021 - Nov 2022',
     description: 'Delivered quality software solutions across multiple projects.',
     responsibilities: [
-      'Conducted manual and automated testing for web applications',
-      'Performed API testing and database validation',
+      'Conducted manual testing for web applications',
+      'Performed API testing validation',
       'Created and maintained test documentation',
       'Participated in Agile ceremonies and sprint planning',
     ],
-    technologies: ['Selenium', 'Postman', 'SQL', 'Jira', 'Git'],
+    technologies: ['Selenium', 'Postman', 'Jira', 'ClickUP', 'Blisk'],
   },
   {
     company: 'MINNOVA',
@@ -119,7 +130,7 @@ export const experiences: Experience[] = [
       'Performed functional and non-functional testing',
       'Reported and tracked bugs through resolution',
     ],
-    technologies: ['Selenium', 'Jira', 'Postman', 'Git'],
+    technologies: ['Jira', 'Trello','Android', 'iOS', 'Manual Testing' ],
   },
   {
     company: '5MATIK',
@@ -132,84 +143,143 @@ export const experiences: Experience[] = [
       'Documented bugs and collaborated with developers',
       'Participated in code reviews and team meetings',
     ],
-    technologies: ['Jira', 'Postman', 'Git', 'SQL'],
+    technologies: [    'Jira','Trello','Postman','Selenium','Manual Testing','UI/UX Testing',],
   },
 ];
 
 export const projects: Project[] = [
   // Mobile Apps
   {
-    title: 'Mobile Banking App',
-    description: 'Comprehensive testing of a fintech mobile banking application with biometric authentication, transaction flows, and real-time notifications.',
-    responsibilities: [
-      'Functional testing of core banking features',
-      'Biometric authentication validation',
-      'Transaction flow testing and verification',
-      'Push notification testing across devices',
-    ],
-    technologies: ['Appium', 'Postman', 'Jira', 'TestFlight', 'ADB'],
+  title: 'NFT Marketplace',
+  description:'Comprehensive testing of a mobile NFT marketplace application featuring NFT trading, wallet integration, collections, and blockchain transactions.',
+
+  responsibilities: [
+    'Tested NFT minting, buying, selling, and transfer workflows',
+    'Validated wallet connection and authentication processes',
+    'Performed functional and usability testing across mobile devices',
+    'Verified NFT collection management and marketplace features',
+    'Tested blockchain transaction statuses and user notifications',
+  ],
+
+  technologies: [
+    'Android',
+    'iOS',
+    'MetaMask',
+    'NFT',
+    'Blockchain',
+  ],
+
+  icon: 'smartphone',
+
+  image:
+    'https://cdn.dockwalk.com/convert/files/2022/04/ed9afe70-c7a2-11ec-ae4a-c5a397219eac-Chub%20Cay%20Marina.jpg/r%5Bwidth%5D=1280/ed9afe70-c7a2-11ec-ae4a-c5a397219eac-Chub%20Cay%20Marina.jpg',
+
+  category: 'mobile',
+},
+  {
+    title: 'Fitness Tracking App',
+    description: 'Testing a mobile fitness application focused on daily activity tracking, step counting, goal management, location tracking, and corporate wellness programs.',
+  responsibilities: [
+    'Tested step counting and activity tracking functionality',
+    'Validated daily goals, achievements, and progress calculations',
+    'Performed location and map feature testing',
+    'Verified corporate subscription and user management flows',
+    'Executed functional, usability, and regression testing across mobile devices',
+  ],
+    technologies: [  'Android','iOS'],
     icon: 'smartphone',
-    image: 'https://images.pexels.com/pexels/5082579/pexels-photo-5082579.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://minnova.io/platform.svg',
     category: 'mobile',
   },
-  {
-    title: 'Crypto Wallet Mobile App',
-    description: 'End-to-end testing of a multi-chain cryptocurrency wallet supporting token swaps, NFT management, and DeFi integrations.',
-    responsibilities: [
-      'Multi-chain wallet functionality testing',
-      'Swap and bridge transaction validation',
-      'NFT display and transfer testing',
-      'Security and recovery flow testing',
-    ],
-    technologies: ['Cypress', 'MetaMask', 'TestRail', 'Firebase'],
-    icon: 'wallet',
-    image: 'https://images.pexels.com/pexels/8370752/pexels-photo-8370752.jpeg?auto=compress&cs=tinysrgb&w=800',
-    category: 'mobile',
-  },
+{
+  title: 'Agriculture Monitoring',
+  description: 'Testing a mobile application for monitoring agricultural and SME development programs, including farmer data collection, crop production tracking, water usage monitoring, business performance reporting, and analytics dashboards.',
+  responsibilities: [
+    'Tested farmer and SME registration and profile management flows',
+    'Validated land use, crop production, and water usage data entry forms',
+    'Verified automatic calculations for water savings, expected yield, and business indicators',
+    'Tested progress dashboards, charts, and data visualization components',
+    'Performed functional, usability, API, and regression testing across mobile devices',
+    'Validated admin panel functionality, filters, reporting, and user management features',
+  ],
+  technologies: ['Postman', 'Azure',   'Android','iOS',],
+  icon: 'smartphone',
+  image: 'wfp-lt.png',
+  category: 'mobile',
+},
+{
+  title: 'Trading App',
+
+  description:
+    'Comprehensive testing of a mobile trading application for stocks and bonds, including real-time quotes, order execution, portfolio management, and trading analytics.',
+
+  responsibilities: [
+    'Tested real-time market data and price updates (quotes)',
+    'Validated order types: market, limit, stop, and TIF execution flows',
+    'Tested portfolio management, balances, and transaction history',
+    'Verified UI/UX of trading screens under high load and fast updates',
+    'Validated API responses for trading operations and market data',
+  ],
+
+  technologies: ['QUIK', 'QORT', 'SUMSUB','Trading APIs','Market Data'],
+
+  icon: 'smartphone',
+  image: 'trading.png',
+  category: 'mobile',
+},
   // Telegram Mini Apps
+{
+  title: 'TG Game',
+  description: 'Quality assurance for a Web3 NFT gaming ecosystem on the TON blockchain, featuring NFT breeding, marketplace trading, reward mechanics, and Telegram mini app integration.',
+  responsibilities: [
+    'Tested Telegram Mini App functionality and user flows',
+    'Validated NFT minting, breeding, and marketplace transactions',
+    'Verified wallet connectivity and TON blockchain interactions',
+    'Tested reward distribution and in-game economy mechanics',
+    'Performed functional, API, and regression testing across web and mobile platforms',
+  ],
+  technologies: ['Jira', 'TON', 'Telegram API'],
+  icon: 'bot',
+  image: 'asika-life.png',
+  category: 'mini-app',
+},
   {
-    title: 'TG Mini App - NFT Marketplace',
-    description: 'Quality assurance for a Telegram mini app NFT marketplace with in-app purchases and wallet connectivity.',
-    responsibilities: [
-      'Telegram WebApp API integration testing',
-      'In-app purchase flow validation',
-      'Wallet connection testing',
-      'Cross-platform compatibility testing',
-    ],
-    technologies: ['Postman', 'Selenium', 'Jira', 'Telegram API'],
-    icon: 'message-circle',
-    image: 'https://images.pexels.com/pexels/7567802/pexels-photo-7567802.jpeg?auto=compress&cs=tinysrgb&w=800',
-    category: 'mini-app',
-  },
-  {
-    title: 'TG Mini App - Trading Bot',
-    description: 'Testing of a Telegram-based trading bot with real-time signals, portfolio tracking, and automated trading features.',
-    responsibilities: [
-      'Bot command testing and validation',
-      'Real-time signal delivery verification',
-      'Portfolio sync testing',
-      'API integration testing',
-    ],
-    technologies: ['Python', 'Postman', 'JMeter', 'WebSocket'],
-    icon: 'bot',
-    image: 'https://images.pexels.com/pexels/8389441/pexels-photo-8389441.jpeg?auto=compress&cs=tinysrgb&w=800',
-    category: 'mini-app',
-  },
+  title: 'Trading Bot',
+  description: 'Quality assurance for a Telegram mini app trading platform integrated with Binance Futures,  portfolio monitoring',
+  responsibilities: [
+    'Tested Telegram Mini App user flows and trading interfaces',
+    'Validated Binance Futures integration and order execution processes',
+  
+    'Tested portfolio tracking, position management, and PnL calculations',
+    'Performed API, regression testing across trading scenarios',
+  ],
+  technologies: ['Postman', 'Binance API',  'Azure'],
+  icon: 'bot',
+  image: 'brain.jpg',
+  category: 'mini-app',
+},
   // Web Applications
   {
-    title: 'Trading Platform Dashboard',
-    description: 'Comprehensive testing of a professional trading platform with real-time charts, order execution, and portfolio management.',
-    responsibilities: [
-      'Chart and data visualization testing',
-      'Order execution validation',
-      'WebSocket real-time data testing',
-      'Performance and load testing',
-    ],
-    technologies: ['Selenium', 'Postman', 'JMeter', 'WebSocket', 'SQL'],
-    icon: 'trending-up',
-    image: 'https://images.pexels.com/pexels/590056/pexels-photo-590056.jpeg?auto=compress&cs=tinysrgb&w=800',
-    category: 'web',
-  },
+  title: 'Real Estate Platform',
+
+  description:
+    'Early-stage testing of a real estate web platform including basic UI, forms, and user flows.',
+
+  responsibilities: [
+    'Tested registration and login flows',
+    'Checked basic UI and form validation',
+    'Verified profile creation and editing',
+    'Reported UI bugs and usability issues',
+    'Performed basic cross-browser testing',
+  ],
+
+  technologies: ['Swagger', 'Azure'],
+
+  icon: 'globe',
+  image:
+    'real-estate.png',
+  category: 'web',
+},
   {
     title: 'Admin Dashboard & Analytics',
     description: 'Quality assurance for an enterprise admin dashboard with user management, analytics, and reporting features.',
@@ -219,45 +289,46 @@ export const projects: Project[] = [
       'User role and permission testing',
       'Report generation testing',
     ],
-    technologies: ['Cypress', 'Postman', 'SQL', 'Grafana'],
+    technologies: ['Postman', 'SQL'],
     icon: 'layout-dashboard',
-    image: 'https://images.pexels.com/pexels/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'admin.png',
     category: 'web',
   },
   // Smart Contracts
-  {
-    title: 'DeFi Smart Contract Suite',
-    description: 'Security and functionality testing for DeFi smart contracts including staking, yield farming, and liquidity pools.',
-    responsibilities: [
-      'Smart contract function testing',
-      'Security vulnerability assessment',
-      'Gas optimization verification',
-      'Integration testing with frontend',
-    ],
-    technologies: ['Hardhat', 'Foundry', 'Slither', 'Mythril', 'Ethers.js'],
-    icon: 'file-code',
-    image: 'https://images.pexels.com/pexels/6772077/pexels-photo-6772077.jpeg?auto=compress&cs=tinysrgb&w=800',
-    category: 'smart-contract',
-  },
-  {
-    title: 'NFT Collection Smart Contract',
-    description: 'Comprehensive testing of ERC-721 smart contracts for NFT collections with minting, royalties, and marketplace integration.',
-    responsibilities: [
-      'Minting mechanism testing',
-      'Royalty distribution validation',
-      'Marketplace compatibility testing',
-      'Upgradeability pattern testing',
-    ],
-    technologies: ['Hardhat', 'OpenZeppelin', 'Foundry', 'IPFS'],
-    icon: 'gem',
-    image: 'https://images.pexels.com/pexels/7567802/pexels-photo-7567802.jpeg?auto=compress&cs=tinysrgb&w=800',
-    category: 'smart-contract',
-  },
+{
+  title: 'Smart Contract',
+  description: 'Testing and validation of smart contract deployment and functionality across Ethereum and BNB Smart Chain, including staking mechanisms and on-chain verification.',
+  responsibilities: [
+    'Smart contract deployment verification on Ethereum and BNB Smart Chain',
+    'Staking functionality testing',
+    'Transaction and contract verification on Etherscan and BscScan',
+    'Integration testing with frontend and Web3 wallets',
+  ],
+  technologies: ['Bscscan', 'Etherscan'],
+  icon: 'file-code',
+  image: 'https://ethereum.org/content/developers/tutorials/hello-world-smart-contract/etherscan-transaction.png',
+  category: 'smart-contract',
+},
+{
+  title: 'DEX',
+  description: 'Comprehensive testing of a decentralized exchange (DEX) built as a Uniswap fork, focusing on automated market making, liquidity pools, and token swaps.',
+  responsibilities: [
+    'AMM swap mechanism testing',
+    'Liquidity pool add/remove validation',
+    'Slippage, price impact, and routing checks',
+    'Smart contract security and edge-case testing',
+  ],
+  technologies: ['Web3.js','RPC'],
+  icon: 'gem',
+  image: 'dex.jpg',
+  category: 'smart-contract',
+}
 ];
 
 export const contactInfo = {
   email: 'liannnaqa@gmail.com',
   phone: '+374 99 018082',
-  linkedin: 'Lianna-Tavadyan',
+  linkedin: 'https://www.linkedin.com/in/lianna-tavadyan-56906a159',
+  linkedinLabel: 'Lianna Tavadyan',
   github: 'Lianna1618',
 };

@@ -27,7 +27,7 @@ export const Footer = () => {
               LT<span className="text-white">.</span>
             </motion.a>
             <p className="text-gray-400 text-sm mb-4">
-              Senior QA Engineer specializing in Web3, Fintech, and enterprise application testing.
+              QA Engineer specializing in Web3, Fintech, and enterprise application testing.
             </p>
             <div className="flex gap-3">
               <motion.a

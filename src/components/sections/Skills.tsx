@@ -1,17 +1,7 @@
 import { motion } from 'framer-motion';
-import { Bug, Cpu, Globe, Database, Wrench, Box, Zap } from 'lucide-react';
 import { SectionHeader, GlassCard } from '../ui';
 import { skillCategories } from '../../data';
 
-const categoryIcons = {
-  Testing: Bug,
-  Automation: Cpu,
-  API: Globe,
-  Databases: Database,
-  Tools: Wrench,
-  Web3: Box,
-  Performance: Zap,
-};
 
 export const Skills = () => {
   return (
@@ -24,7 +14,8 @@ export const Skills = () => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {skillCategories.map((category, categoryIndex) => {
-            const IconComponent = categoryIcons[category.title as keyof typeof categoryIcons] || Bug;
+            // const IconComponent = categoryIcons[category.title as keyof typeof categoryIcons]
+            const IconComponent = category.icon
             return (
               <motion.div
                 key={category.title}
